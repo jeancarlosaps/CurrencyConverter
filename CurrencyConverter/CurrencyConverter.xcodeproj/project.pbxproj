@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8384A5C74F9F2C1670460EAF /* Pods_CurrencyConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C57AE3EDB8525B5B544EA4 /* Pods_CurrencyConverter.framework */; };
+		D94C6F6A23D8B00A00ED8C53 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C6F6923D8B00A00ED8C53 /* LoginPresenter.swift */; };
+		D94C6F6C23D8B1C200ED8C53 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C6F6B23D8B1C200ED8C53 /* LoginModel.swift */; };
 		D94F1F5223D653C600F147EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F1F5123D653C600F147EB /* AppDelegate.swift */; };
 		D94F1F5423D653C600F147EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F1F5323D653C600F147EB /* SceneDelegate.swift */; };
-		D94F1F5623D653C600F147EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F1F5523D653C600F147EB /* ViewController.swift */; };
+		D94F1F5623D653C600F147EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F1F5523D653C600F147EB /* LoginViewController.swift */; };
 		D94F1F5923D653C600F147EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94F1F5723D653C600F147EB /* Main.storyboard */; };
 		D94F1F5B23D653C800F147EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94F1F5A23D653C800F147EB /* Assets.xcassets */; };
 		D94F1F5E23D653C800F147EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94F1F5C23D653C800F147EB /* LaunchScreen.storyboard */; };
 		D94F1F6923D653C800F147EB /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F1F6823D653C800F147EB /* CurrencyConverterTests.swift */; };
 		D94F1F7423D653C800F147EB /* CurrencyConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F1F7323D653C800F147EB /* CurrencyConverterUITests.swift */; };
+		D9650C5E23D6610600C8D6BC /* StringsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9650C5D23D6610600C8D6BC /* StringsHelper.swift */; };
+		D9650C6223D7493D00C8D6BC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9650C6123D7493D00C8D6BC /* CustomButton.swift */; };
+		D9650C6423D752B700C8D6BC /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9650C6323D752B700C8D6BC /* DesignableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +43,12 @@
 /* Begin PBXFileReference section */
 		08477AF5720F5BD7775E40A4 /* Pods-CurrencyConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverter.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConverter/Pods-CurrencyConverter.release.xcconfig"; sourceTree = "<group>"; };
 		59C57AE3EDB8525B5B544EA4 /* Pods_CurrencyConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94C6F6923D8B00A00ED8C53 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		D94C6F6B23D8B1C200ED8C53 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		D94F1F4E23D653C600F147EB /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94F1F5123D653C600F147EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94F1F5323D653C600F147EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D94F1F5523D653C600F147EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D94F1F5523D653C600F147EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D94F1F5823D653C600F147EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D94F1F5A23D653C800F147EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D94F1F5D23D653C800F147EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		D94F1F6F23D653C800F147EB /* CurrencyConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94F1F7323D653C800F147EB /* CurrencyConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterUITests.swift; sourceTree = "<group>"; };
 		D94F1F7523D653C800F147EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9650C5D23D6610600C8D6BC /* StringsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsHelper.swift; sourceTree = "<group>"; };
+		D9650C6123D7493D00C8D6BC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D9650C6323D752B700C8D6BC /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		E4C09374087F3BCF14BB361F /* Pods-CurrencyConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverter.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyConverter/Pods-CurrencyConverter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,12 +133,12 @@
 		D94F1F5023D653C600F147EB /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				D9650C5C23D660BE00C8D6BC /* Utils */,
 				D9650C5B23D658A900C8D6BC /* Presenter */,
 				D9650C5A23D6589B00C8D6BC /* View */,
 				D9650C5923D6588D00C8D6BC /* Model */,
 				D94F1F5123D653C600F147EB /* AppDelegate.swift */,
 				D94F1F5323D653C600F147EB /* SceneDelegate.swift */,
-				D94F1F5523D653C600F147EB /* ViewController.swift */,
 				D94F1F5723D653C600F147EB /* Main.storyboard */,
 				D94F1F5A23D653C800F147EB /* Assets.xcassets */,
 				D94F1F5C23D653C800F147EB /* LaunchScreen.storyboard */,
@@ -158,6 +168,7 @@
 		D9650C5923D6588D00C8D6BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D94C6F6B23D8B1C200ED8C53 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 		D9650C5A23D6589B00C8D6BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D94F1F5523D653C600F147EB /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,8 +184,19 @@
 		D9650C5B23D658A900C8D6BC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D94C6F6923D8B00A00ED8C53 /* LoginPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D9650C5C23D660BE00C8D6BC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9650C5D23D6610600C8D6BC /* StringsHelper.swift */,
+				D9650C6123D7493D00C8D6BC /* CustomButton.swift */,
+				D9650C6323D752B700C8D6BC /* DesignableTextField.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,9 +374,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94F1F5623D653C600F147EB /* ViewController.swift in Sources */,
+				D9650C5E23D6610600C8D6BC /* StringsHelper.swift in Sources */,
+				D9650C6423D752B700C8D6BC /* DesignableTextField.swift in Sources */,
+				D94C6F6A23D8B00A00ED8C53 /* LoginPresenter.swift in Sources */,
+				D94F1F5623D653C600F147EB /* LoginViewController.swift in Sources */,
 				D94F1F5223D653C600F147EB /* AppDelegate.swift in Sources */,
+				D94C6F6C23D8B1C200ED8C53 /* LoginModel.swift in Sources */,
 				D94F1F5423D653C600F147EB /* SceneDelegate.swift in Sources */,
+				D9650C6223D7493D00C8D6BC /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

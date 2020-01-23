@@ -7,20 +7,194 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currencyconverter_logo" translatesAutoresizingMaskIntoConstraints="NO" id="UjL-Ie-G5P">
+                                <rect key="frame" x="167" y="35" width="80" height="80"/>
+                                <color key="tintColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="hHw-5L-Wg6"/>
+                                    <constraint firstAttribute="width" constant="80" id="y3x-LM-Na7"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4sb-5s-Xdd" userLabel="Stack View - Login">
+                                <rect key="frame" x="16" y="150" width="382" height="217.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg2-X8-IBB">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDr-cg-S68" customClass="DesignableTextField" customModule="CurrencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="43.666666666666657" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="mym-g7-nwy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="setImage" value="icon_userOrEmail"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1a-18-dZ1" customClass="DesignableTextField" customModule="CurrencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106.66666666666669" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="xMy-bN-1sB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="setImage" value="icon_password"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ii-h9-mdd" customClass="CustomButton" customModule="CurrencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="169.66666666666669" width="382" height="48"/>
+                                        <color key="backgroundColor" red="0.12109283408190039" green="0.28518435574758844" blue="0.58972477791878175" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="V1g-RX-nU5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Login"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundImageColor">
+                                                <color key="value" red="0.066666666666666666" green="0.46666666666666667" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                <color key="value" red="0.088119361926702236" green="0.21734846945605987" blue="0.5897247779" alpha="0.54941673801369861" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-fh-LGk" userLabel="Stack View - LoginSocial">
+                                <rect key="frame" x="16" y="490" width="382" height="176"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eym-xk-46h" customClass="CustomButton" customModule="CurrencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="nbv-rr-tQR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <size key="titleShadowOffset" width="1" height="0.0"/>
+                                        <state key="normal" title="Login with Facebook">
+                                            <color key="titleColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundImageColor">
+                                                <color key="value" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                <color key="value" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJS-XF-4yI" customClass="CustomButton" customModule="CurrencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="2TG-JV-fUg"/>
+                                        </constraints>
+                                        <state key="normal" title="Login with Twitter">
+                                            <color key="titleColor" red="0.0" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                <color key="value" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundImageColor">
+                                                <color key="value" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMe-Rh-sDv" customClass="CustomButton" customModule="CurrencyConverter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="kiR-Xz-BqI"/>
+                                        </constraints>
+                                        <state key="normal" title="Login with Google">
+                                            <color key="titleColor" red="0.85882352941176465" green="0.29019607843137252" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundImageColor">
+                                                <color key="value" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="customBorderColor">
+                                                <color key="value" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4sb-5s-Xdd" secondAttribute="trailing" constant="16" id="0F2-iu-geI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z1X-fh-LGk" secondAttribute="bottom" constant="70" id="Aes-Wx-OjD"/>
+                            <constraint firstItem="Z1X-fh-LGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CQ9-YH-zRj"/>
+                            <constraint firstItem="UjL-Ie-G5P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Sd8-LT-fti"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1X-fh-LGk" secondAttribute="trailing" constant="16" id="YTX-io-G7s"/>
+                            <constraint firstItem="4sb-5s-Xdd" firstAttribute="top" secondItem="UjL-Ie-G5P" secondAttribute="bottom" constant="35" id="rlj-Fg-Pg0"/>
+                            <constraint firstItem="4sb-5s-Xdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xwu-Ub-ZbG"/>
+                            <constraint firstItem="UjL-Ie-G5P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="zco-eB-nUn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="9Ii-h9-mdd" id="DFy-HL-SX3"/>
+                        <outlet property="loginWithFacebookButton" destination="Eym-xk-46h" id="nid-eu-8E0"/>
+                        <outlet property="loginWithGoogleButton" destination="nMe-Rh-sDv" id="7iq-p2-LhU"/>
+                        <outlet property="loginWithTwitterButton" destination="aJS-XF-4yI" id="Dis-XJ-1VY"/>
+                        <outlet property="passwordTextField" destination="m1a-18-dZ1" id="f5u-mc-pRT"/>
+                        <outlet property="userNameTextField" destination="YDr-cg-S68" id="bUq-pf-7qM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="113.04347826086958" y="-61.141304347826093"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="currencyconverter_logo" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="icon_password" width="50" height="50"/>
+        <image name="icon_userOrEmail" width="50" height="50"/>
+    </resources>
 </document>

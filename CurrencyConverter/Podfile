@@ -1,4 +1,6 @@
 target 'CurrencyConverter' do
   use_frameworks!
   pod 'Alamofire', '~> 4.0'
+  pod 'Firebase/Auth'
+
 end
