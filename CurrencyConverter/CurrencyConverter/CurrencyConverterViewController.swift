@@ -24,9 +24,7 @@ class CurrencyConverterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currencyTypeValue.delegate = self
-        currencyTypePickerView.delegate = self
-        
+        configureProtocols()
         
         configureTextField()
         print("Antes \(viewModel.getRates())")
@@ -42,6 +40,15 @@ class CurrencyConverterViewController: UIViewController {
            currencyTypeNewValue.placeholder = StringsHelper.newValue
        }
     
+    // MARK: - Private Methods
+    private func configureProtocols() {
+        currencyTypeValue.delegate = self
+        currencyTypePickerView.delegate = self
+        currencyTypePickerView.dataSource = self
+        desideredCurrencyPickerView.delegate = self
+        desideredCurrencyPickerView.dataSource = self
+    }
+    
     // MARK: - Actions
     @IBAction func currencyConverter(_ sender: Any) {
         currencyTypeNewValue.text = String(viewModel.converter(inputValue: 0.0, newValue: 0.0))
@@ -52,12 +59,12 @@ class CurrencyConverterViewController: UIViewController {
 extension CurrencyConverterViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return  NSLog("%@", rates[row].AUD)
-        return ""
+//        return  NSLog("%@", viewModel.getRates().first ?? "CAD")
+        return "CAD"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        currencyTypeValue.text = String(rates[row])
+        currencyTypeValue.text = String(viewModel.getNameRate(row: row))
     }
 }
 
@@ -69,8 +76,6 @@ extension CurrencyConverterViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return viewModel.getNumbersOfRates()
     }
-    
-    
 }
 
 extension CurrencyConverterViewController: UITextFieldDelegate {
