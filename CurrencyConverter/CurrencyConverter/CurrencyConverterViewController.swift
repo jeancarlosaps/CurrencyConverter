@@ -13,7 +13,6 @@ class CurrencyConverterViewController: UIViewController {
     // MARK: - Properties
     private let viewModel = CurrencyConverterViewModel()
     
-    
     // MARK: - Outlets
     @IBOutlet weak var currencyTypePickerView: UIPickerView!
     @IBOutlet weak var desideredCurrencyPickerView: UIPickerView!
@@ -31,16 +30,15 @@ class CurrencyConverterViewController: UIViewController {
         viewModel.fetchCurrencies()
     }
     
-    // MARK: - Properties
-       private func configureTextField() {
-           currencyTypeValue.tintColor = UIColor.lightGray
-           currencyTypeNewValue.tintColor = UIColor.lightGray
-           
-           currencyTypeValue.placeholder = StringsHelper.value
-           currencyTypeNewValue.placeholder = StringsHelper.newValue
-       }
-    
     // MARK: - Private Methods
+    private func configureTextField() {
+        currencyTypeValue.tintColor = UIColor.lightGray
+        currencyTypeNewValue.tintColor = UIColor.lightGray
+        
+        currencyTypeValue.placeholder = StringsHelper.value
+        currencyTypeNewValue.placeholder = StringsHelper.newValue
+    }
+    
     private func configureProtocols() {
         currencyTypeValue.delegate = self
         currencyTypePickerView.delegate = self
@@ -56,26 +54,26 @@ class CurrencyConverterViewController: UIViewController {
 }
 
 // MARK: - Extensions
-extension CurrencyConverterViewController: UIPickerViewDelegate {
+extension CurrencyConverterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return  NSLog("%@", viewModel.getRates().first ?? "CAD")
-        return "CAD"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        currencyTypeValue.text = String(viewModel.getNameRate(row: row))
-    }
-}
-
-extension CurrencyConverterViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return viewModel.getNumbersOfRatesRowsInComponent()
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.getNumbersOfRates()
+        return viewModel.getNumbersOfRatesRowsInComponent()
     }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        //        return  NSLog("%@", viewModel.getRates().first ?? "CAD")
+        return "CAD"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currencyTypeValue.text = String(viewModel.getTitleRateForRow(row: row))
+    }
+    
 }
 
 extension CurrencyConverterViewController: UITextFieldDelegate {

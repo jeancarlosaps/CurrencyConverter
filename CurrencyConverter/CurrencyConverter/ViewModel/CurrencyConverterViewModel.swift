@@ -11,8 +11,8 @@ import Foundation
 //MARK: - Protocols
 protocol CurrenciesProtocol {
     func getRates() -> [Rates]
-    func getNumbersOfRates() -> Int
-    func getNameRate(row: Int) -> Int
+    func getNumbersOfRatesRowsInComponent() -> Int
+    func getTitleRateForRow(row: Int) -> Int
 }
 
 class CurrencyConverterViewModel: CurrenciesProtocol {
@@ -55,11 +55,11 @@ class CurrencyConverterViewModel: CurrenciesProtocol {
         return ratesList
     }
     
-    func getNumbersOfRates() -> Int {
+    func getNumbersOfRatesRowsInComponent() -> Int {
         return ratesList.count
     }
     
-    func getNameRate(row: Int) -> Int {
+    func getTitleRateForRow(row: Int) -> Int {
         return Int(ratesList[row])
     }
     
